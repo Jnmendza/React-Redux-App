@@ -1,4 +1,5 @@
 import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE } from '../actions';
+// import { combineReducers } from 'redux'
 
 const initialState = {
     footballVideos: [],
@@ -20,13 +21,13 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 isFetching: false,
                 error: '',
-                footballVideos: action.payload    
+                footballVideos: [...action.payload]    
             }
         case FETCH_FAILURE:
         return {
             ...state,
             isFetching: false,
-            error: action.payload   
+            error: [...action.payload]     
         }
         default:
             return state;

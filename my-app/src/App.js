@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import FootballVideos from './components/FootballVideos';
+import { connect } from 'react-redux';
 
 
 function App() {
@@ -12,4 +13,9 @@ function App() {
   );
 }
 
+
 export default App;
+
+// export default connect(
+//   null, {})(App)
+

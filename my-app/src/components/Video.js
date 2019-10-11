@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Video = props => {
+const Video = ({video}) => {
     return (
         <div>
-            <p>{props.video.title}</p>
+            <p>{video.title}</p>
+           
+            
         </div>
     )
 }

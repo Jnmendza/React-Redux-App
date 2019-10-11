@@ -23,6 +23,7 @@ const FootballVideos = props => {
 
 
 const mapStateToProps = state => {
+    console.log(state)
     return {
         footballVideos: state.footballVideos,
         isFetching: state.isFetching,
