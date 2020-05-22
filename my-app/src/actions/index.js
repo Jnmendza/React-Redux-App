@@ -13,7 +13,9 @@ it will be dispatched to the reducer
 const fetchVideos = () => dispatch => {
         dispatch({ type: START_FETCHING})
         axios   
+        // GET request
             .get('https://www.scorebat.com/video-api/v1/')
+        // You get a promise and store the responses data in payload
             .then(response => dispatch({ type: FETCH_SUCCESS, payload: response.data}))
             .catch(error => dispatch({ type: FETCH_FAILURE, payload: error.response}))
 };
